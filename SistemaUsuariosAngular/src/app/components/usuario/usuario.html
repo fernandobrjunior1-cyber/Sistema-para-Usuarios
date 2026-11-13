@@ -1,0 +1,37 @@
+
+<div class="painel-usuario">
+
+  <div class="cabecalho">
+    <h1>Painel do Usuário</h1>
+    <p>Sistema de Gerenciamento de Usuários</p>
+  </div>
+
+  <div class="conteudo">
+
+    <h2>
+      Bem-vindo, {{ auth.usuarioLogado()?.nome }}!
+    </h2>
+
+    <p>
+      <strong>Logado como:</strong>
+      {{ auth.usuarioLogado()?.nome }}
+    </p>
+
+    <p>
+      <strong>Perfil:</strong>
+      <span class="perfil">
+        {{ auth.usuarioLogado()?.perfil }}
+      </span>
+    </p>
+
+    <div class="mensagem">
+      ✔ Você está conectado como usuário comum.
+    </div>
+
+    <button type="button" (click)="sair()">
+      Sair do Sistema
+    </button>
+
+  </div>
+
+</div>

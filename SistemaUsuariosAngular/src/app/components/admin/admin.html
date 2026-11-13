@@ -1,0 +1,35 @@
+
+<div class="painel-admin">
+
+  <div class="cabecalho">
+    <h1>Painel do Administrador</h1>
+    <p>Gerenciamento do Sistema de Usuários</p>
+  </div>
+
+  <div class="conteudo">
+
+    <h2>Bem-vindo, {{ auth.usuarioLogado()?.nome }}!</h2>
+
+    <p>
+      <strong>Logado como:</strong>
+      {{ auth.usuarioLogado()?.nome }}
+    </p>
+
+    <p>
+      <strong>Perfil:</strong>
+      <span class="perfil">
+        {{ auth.usuarioLogado()?.perfil }}
+      </span>
+    </p>
+
+    <div class="mensagem">
+      Você possui acesso administrativo ao sistema.
+    </div>
+
+    <button type="button" (click)="sair()">
+      Sair do Sistema
+    </button>
+
+  </div>
+
+</div>

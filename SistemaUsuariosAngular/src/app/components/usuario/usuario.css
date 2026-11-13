@@ -1,0 +1,109 @@
+
+/* Painel principal */
+
+.painel-usuario {
+  max-width: 650px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho verde */
+
+.cabecalho {
+  background: linear-gradient(135deg, #146c43, #28a745);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.cabecalho p {
+  margin-top: 10px;
+  color: #e3f9e8;
+}
+
+/* Conteúdo */
+
+.conteudo {
+  padding: 35px;
+  text-align: center;
+}
+
+.conteudo h2 {
+  color: #146c43;
+  margin-bottom: 25px;
+}
+
+.conteudo p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Identificação do perfil */
+
+.perfil {
+  display: inline-block;
+  background-color: #d9f5e3;
+  color: #146c43;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Mensagem de autenticação */
+
+.mensagem {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #e8f7ed;
+  color: #16803c;
+  border: 1px solid #a3d9b1;
+  border-radius: 8px;
+}
+
+/* Botão de saída */
+
+button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #a91f1f;
+  transform: translateY(-2px);
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 600px) {
+  .painel-usuario {
+    margin: 20px 12px;
+  }
+
+  .cabecalho {
+    padding: 22px 15px;
+  }
+
+  .cabecalho h1 {
+    font-size: 23px;
+  }
+
+  .conteudo {
+    padding: 25px 15px;
+  }
+}

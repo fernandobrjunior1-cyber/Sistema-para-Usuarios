@@ -1,0 +1,43 @@
+
+<h2>Cadastro de Usuário</h2>
+
+<form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome">
+
+    @if (formulario.controls.nome.hasError('required')) {
+      <mat-error>O nome é obrigatório.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input matInput type="email" formControlName="email">
+
+    @if (formulario.controls.email.hasError('required')) {
+      <mat-error>O e-mail é obrigatório.</mat-error>
+    } @else if (formulario.controls.email.hasError('email')) {
+      <mat-error>Digite um e-mail válido.</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input matInput type="password" formControlName="senha">
+
+    @if (formulario.controls.senha.hasError('required')) {
+      <mat-error>A senha é obrigatória.</mat-error>
+    } @else if (formulario.controls.senha.hasError('minlength')) {
+      <mat-error>Mínimo de 6 caracteres.</mat-error>
+    } @else if (formulario.controls.senha.hasError('semMaiuscula')) {
+      <mat-error>Inclua uma letra maiúscula.</mat-error>
+    }
+  </mat-form-field>
+
+  <button mat-flat-button type="submit">
+    Cadastrar
+  </button>
+
+</form>

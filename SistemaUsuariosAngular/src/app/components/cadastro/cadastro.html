@@ -1,0 +1,74 @@
+
+<section class="cadastro-container">
+
+  <div class="cadastro-card">
+
+    <h1>Cadastrar usuário</h1>
+
+    <form (ngSubmit)="cadastrar()">
+
+      <label for="nome">Nome completo</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        [(ngModel)]="nome"
+        placeholder="Digite seu nome"
+        required
+      />
+
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Digite seu e-mail"
+        required
+      />
+
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        name="senha"
+        type="password"
+        [(ngModel)]="senha"
+        placeholder="Crie uma senha"
+        required
+      />
+
+      <label for="confirmarSenha">Confirmar senha</label>
+      <input
+        id="confirmarSenha"
+        name="confirmarSenha"
+        type="password"
+        [(ngModel)]="confirmarSenha"
+        placeholder="Digite a senha novamente"
+        required
+      />
+
+  <button
+  type="submit"
+  [disabled]="salvando()">
+
+  {{ salvando() ? 'Cadastrando...' : 'Cadastrar' }}
+
+</button>
+
+    </form>
+
+    @if (mensagem()) {
+      <p
+        class="mensagem"
+        [class.sucesso]="tipoMensagem() === 'sucesso'"
+        [class.erro]="tipoMensagem() === 'erro'">
+        {{ mensagem() }}
+      </p>
+    }
+
+    <a routerLink="/login">Voltar ao login</a>
+
+  </div>
+
+</section>
+

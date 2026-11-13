@@ -1,0 +1,186 @@
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef3f9;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #174a8b;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1765c1;
+}
+
+button {
+  margin-top: 12px;
+  padding: 12px;
+  background: #1765c1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #104d96;
+}
+
+.mensagem {
+  margin-top: 18px;
+  text-align: center;
+  color: #174a8b;
+}
+
+.link-cadastro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-cadastro a {
+  color: #1765c1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-cadastro a:hover {
+  text-decoration: underline;
+}
+
+
+.area-usuario {
+  text-align: center;
+}
+
+.area-usuario p {
+  color: #333;
+  margin: 12px 0;
+}
+
+.area-admin,
+.area-comum {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eef3f9;
+  border-radius: 8px;
+}
+
+.area-admin h3,
+.area-comum h3 {
+  color: #174a8b;
+}
+
+.area-usuario button {
+  width: 100%;
+}
+
+.mensagem-erro {
+  color: #c62828;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+.sessao-validada {
+  color: #16803c;
+  background-color: #e8f7ed;
+  border: 1px solid #a3d9b1;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Painel do usuário autenticado */
+
+.painel {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Área do administrador */
+
+.area-admin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e8f0ff;
+  border: 1px solid #9bbcff;
+}
+
+.area-admin h3 {
+  color: #174ea6;
+}
+
+/* Área do usuário comum */
+
+.area-usuario {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e8f7ed;
+  border: 1px solid #a3d9b1;
+}
+
+.area-usuario h3 {
+  color: #16803c;
+}
+
+/* Confirmação da autenticação */
+
+.sessao-validada {
+  color: #16803c;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,115 @@
+
+<div class="login-container">
+
+  @if (usuarioLogado(); as usuario) {
+
+    <div class="painel">
+
+      <h2>Bem-vindo, {{ usuario.nome }}!</h2>
+
+      <p>
+        <strong>Logado como:</strong>
+        {{ usuario.nome }}
+      </p>
+
+      <p>
+        <strong>Perfil:</strong>
+        {{ usuario.perfil }}
+      </p>
+
+      @if (perfilVerificado()) {
+
+        <p class="sessao-validada">
+          ✔ Sessão autenticada pela API
+        </p>
+
+        @if (usuario.perfil === 'Administrador') {
+
+          <div class="area-admin">
+
+            <h3>Painel do Administrador</h3>
+
+            <p>
+              Você possui acesso administrativo
+              ao sistema.
+            </p>
+
+          </div>
+
+        } @else {
+
+          <div class="area-usuario">
+
+            <h3>Painel do Usuário</h3>
+
+            <p>
+              Você está conectado ao sistema
+              como usuário comum.
+            </p>
+
+          </div>
+
+        }
+
+      } @else {
+
+        <p>Validando sessão...</p>
+
+      }
+
+      <button type="button" (click)="sair()">
+        Sair
+      </button>
+
+    </div>
+
+  } @else {
+
+    <div class="formulario-login">
+
+      <h2>Entrar no Sistema</h2>
+
+      <form (ngSubmit)="entrar()">
+
+        <label for="email">E-mail</label>
+
+        <input
+          id="email"
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <label for="senha">Senha</label>
+
+        <input
+          id="senha"
+          type="password"
+          name="senha"
+          [(ngModel)]="senha"
+          placeholder="Digite sua senha"
+          required
+        />
+
+        <button type="submit" [disabled]="carregando()">
+          {{ carregando() ? 'Entrando...' : 'Entrar' }}
+        </button>
+
+      </form>
+
+      <p class="mensagem-erro">
+        {{ mensagem() }}
+      </p>
+
+      <p>
+        Não possui cadastro?
+        <a routerLink="/cadastro">Criar conta</a>
+      </p>
+
+    </div>
+
+  }
+
+</div>
